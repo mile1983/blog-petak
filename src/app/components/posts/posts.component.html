@@ -1,3 +1,31 @@
-<p>
+<!-- <p>
   posts works!
-</p>
+</p> -->
+<div class="container">
+  <hr>
+  <h1>Posts</h1>
+  <hr>
+  <table class="table table-striped">
+      <thead>
+          <tr>
+              <!-- <th>Id</th> -->
+              <th>Title</th>
+             <th>View Post</th>
+              <!-- <th>Created_at</th> -->
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let post of posts">
+              <td class="align-middle">
+                {{post.title}}
+              </td>
+              <td class="align-middle">
+                <!-- <a routerLink = "/posts:id">View</a> -->
+                <a class="btn btn-primary" [routerLink] = "['/posts', post.id]">View</a>
+              </td>
+             
+             
+          </tr>
+      </tbody>
+  </table>
+</div>
